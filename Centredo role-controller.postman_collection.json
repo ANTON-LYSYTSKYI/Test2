@@ -1,0 +1,592 @@
+{
+	"info": {
+		"_postman_id": "5e836234-4027-4213-9905-ca10a1382df5",
+		"name": "Centredo role-controller",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "api.centredo.com"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "uk"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "origin",
+						"value": "https://app.centredo.com"
+					},
+					{
+						"key": "pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "referer",
+						"value": "https://app.centredo.com/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not_A Brand\";v=\"99\", \"Google Chrome\";v=\"109\", \"Chromium\";v=\"109\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-site"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"login\":\"lisitsky89@gmail.com\",\"password\":\"NmA6GXpqUxQ5FCg\"}"
+				},
+				"url": {
+					"raw": "https://api.centredo.com/api/login",
+					"protocol": "https",
+					"host": [
+						"api",
+						"centredo",
+						"com"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Role creation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "api.centredo.com"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "uk"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer 0e1f0303-3661-454f-8c1b-6bba26e7d9e6"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "origin",
+						"value": "https://app.centredo.com"
+					},
+					{
+						"key": "pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "referer",
+						"value": "https://app.centredo.com/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not_A Brand\";v=\"99\", \"Google Chrome\";v=\"109\", \"Chromium\";v=\"109\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-site"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountUuid\": \"d51c5306-0e5c-46f3-bc4f-eed0378d5efd\",\r\n    \"name\": \"TEST\",\r\n    \"permissions\": [\r\n        1000,\r\n        1001,\r\n        1002,\r\n        2000,\r\n        2001,\r\n        2002,\r\n        2003,\r\n        2004,\r\n        2005,\r\n        2006,\r\n        2007,\r\n        2008,\r\n        2009,\r\n        2010,\r\n        2011,\r\n        2012,\r\n        2013,\r\n        3000,\r\n        3001,\r\n        5000,\r\n        5001,\r\n        5002,\r\n        5003,\r\n        5004\r\n    ],\r\n    \"system\": false,\r\n    \"type\": \"mailbox\",\r\n    \"uuid\": null,\r\n    \"description\": \"11111\"\r\n}"
+				},
+				"url": {
+					"raw": "https://api.centredo.com/api/v1/permission/role",
+					"protocol": "https",
+					"host": [
+						"api",
+						"centredo",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"permission",
+						"role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read role",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authority",
+						"value": "api.centredo.com"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "uk"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer 0e1f0303-3661-454f-8c1b-6bba26e7d9e6"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "origin",
+						"value": "https://app.centredo.com"
+					},
+					{
+						"key": "pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "referer",
+						"value": "https://app.centredo.com/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not_A Brand\";v=\"99\", \"Google Chrome\";v=\"109\", \"Chromium\";v=\"109\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-site"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
+					}
+				],
+				"url": {
+					"raw": "https://api.centredo.com/api/v1/permission/role/357cd152-14e4-47f8-96cf-0a124116c97b",
+					"protocol": "https",
+					"host": [
+						"api",
+						"centredo",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"permission",
+						"role",
+						"357cd152-14e4-47f8-96cf-0a124116c97b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update role",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authority",
+						"value": "api.centredo.com"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "uk"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer f7558055-2e5d-4fab-a768-7a799bd44df1"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "origin",
+						"value": "https://app.centredo.com"
+					},
+					{
+						"key": "pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "referer",
+						"value": "https://app.centredo.com/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not_A Brand\";v=\"99\", \"Google Chrome\";v=\"109\", \"Chromium\";v=\"109\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-site"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"test2\",\r\n    \"description\": \"22222333333333333\",\r\n    \"type\": \"account\",\r\n    \"permissions\": [\r\n        10120,\r\n        10000,\r\n        10001,\r\n        10002,\r\n        10130,\r\n        10003,\r\n        10004,\r\n        10005,\r\n        10006,\r\n        10007,\r\n        10008,\r\n        10200,\r\n        10009,\r\n        10201,\r\n        10010,\r\n        10202,\r\n        10011,\r\n        10012,\r\n        10013,\r\n        10014,\r\n        10015,\r\n        10016,\r\n        10211,\r\n        10212,\r\n        10213,\r\n        10214,\r\n        10100,\r\n        10101\r\n    ],\r\n    \"accountUuid\": \"d51c5306-0e5c-46f3-bc4f-eed0378d5efd\",\r\n    \"system\": false,\r\n    \"uuid\": \"a70a3ecc-c83d-4b93-b319-909e7e559a5e\"\r\n}"
+				},
+				"url": {
+					"raw": "https://api.centredo.com/api/v1/permission/role/a70a3ecc-c83d-4b93-b319-909e7e559a5e",
+					"protocol": "https",
+					"host": [
+						"api",
+						"centredo",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"permission",
+						"role",
+						"a70a3ecc-c83d-4b93-b319-909e7e559a5e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read all roles",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authority",
+						"value": "api.centredo.com"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "uk"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer f7558055-2e5d-4fab-a768-7a799bd44df1"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "origin",
+						"value": "https://app.centredo.com"
+					},
+					{
+						"key": "pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "referer",
+						"value": "https://app.centredo.com/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not_A Brand\";v=\"99\", \"Google Chrome\";v=\"109\", \"Chromium\";v=\"109\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-site"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
+					}
+				],
+				"url": {
+					"raw": "https://api.centredo.com/api/v1/permission/role/account/d51c5306-0e5c-46f3-bc4f-eed0378d5efd?type=account&limit=20&offset=0",
+					"protocol": "https",
+					"host": [
+						"api",
+						"centredo",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"permission",
+						"role",
+						"account",
+						"d51c5306-0e5c-46f3-bc4f-eed0378d5efd"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "account"
+						},
+						{
+							"key": "limit",
+							"value": "20"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read all system roles",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer f7558055-2e5d-4fab-a768-7a799bd44df1"
+					}
+				],
+				"url": {
+					"raw": "https://api.centredo.com/api/v1/permission/role?offset=3&limit=20",
+					"protocol": "https",
+					"host": [
+						"api",
+						"centredo",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"permission",
+						"role"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "3"
+						},
+						{
+							"key": "limit",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete role",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authority",
+						"value": "api.centredo.com"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "uk"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer f7558055-2e5d-4fab-a768-7a799bd44df1"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "origin",
+						"value": "https://app.centredo.com"
+					},
+					{
+						"key": "pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "referer",
+						"value": "https://app.centredo.com/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not_A Brand\";v=\"99\", \"Google Chrome\";v=\"109\", \"Chromium\";v=\"109\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-site"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
+					}
+				],
+				"url": {
+					"raw": "https://api.centredo.com/api/v1/permission/role/f892fe08-701b-4b81-897b-918c78906afc",
+					"protocol": "https",
+					"host": [
+						"api",
+						"centredo",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"permission",
+						"role",
+						"f892fe08-701b-4b81-897b-918c78906afc"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
